@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order now</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- google fonts -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "furniture-primary": "#E76F51",
+            "furniture-slider-bg": "rgba(231, 111, 81, 0.1)"
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .font-poppins {
+        font-family: "Poppins", sans-serif;
+    }
+  </style>
+</head>
+<body class="font-poppins">
+   <header>
+    <nav>
+        <div class="navbar bg-base-100">
+        <div class="flex-1">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+              <li><a href="index.html">Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Contact</a></li>
+              <li><a href="login.html">Login</a></li>
+            </ul>
+          </div>
+          <a class="text-xl font-bold">Furniture Dekho</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a>Contact</a></li>
+              <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+        <div class="">
+          <a href="signup.html" class="btn bg-furniture-primary text-white hover:bg-furniture-slider-bg justify-center align-middle"><img src="images/icons/account.png" alt="" width="30px">Sign up</a>
+        </div>
+      </div>
+    </nav>
+    </nav>
+   </header>
+   <main>
+    <section class="my-10 mx-20">
+        <h1 class="text-3xl font-bold mb-5">Your Cart</h1>
+        <div class="overflow-x-auto">
+            <table class="table w-full">
+              <!-- head -->
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Product</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- row 1 -->
+                <tr>
+                  <th>1</th>
+                  <td>
+                    <div class="flex items-center space-x-4">
+                      <img src="images/slider/furniture(2).png" alt="Modern sofa" class="w-20 h-20 object-cover rounded" />
+                      <div>
+                        <div class="font-semibold">Modern Sofa</div>
+                        <div class="text-sm text-gray-500">Beige · 3-seater</div>
+                      </div>
+                    </div>
+                    </td>
+                    <td>$499.99</td>
+                    <td>
+                      <div class="flex items-center space-x-2">
+                        <input type="number" class="input input-sm w-16 text-center" value="1" min="1" max="10" aria-label="quantity" />
+                      </div>
+                    </td>
+                    <td>$499.99</td>
+                    <td>
+                      <button class="btn btn-sm btn-circle btn-ghost text-red-500 hover:bg-red-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>2</th>
+                    <td>
+                      <div class="flex items-center space-x-4">
+                        <img src="images/slider/furniture(3).png" alt="Dining Table" class="w-20 h-20 object-cover rounded" />
+                        <div>
+                          <div class="font-semibold">Dining Table</div>
+                            <div class="text-sm text-gray-500">Wooden · 6-seater</div>
+                          
+                        </div>
+                      </div>
+                    </td>
+                    <td>$799.99</td>
+                    <td>
+                      <div class="flex items-center space-x-2">
+                        <input type="number" class="input input-sm w-16 text-center" value="1" min="1" max="10" aria-label="quantity" />
+                      </div>
+                    </td>
+                    <td>$799.99</td>
+                    <td>
+                      <button class="btn btn-sm btn-circle btn-ghost text-red-500 hover:bg-red-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>3</th>
+                    <td>
+                      <div class="flex items-center space-x-4">
+                        <img src="images/slider/furniture(4).png" alt="Comfortable Armchair" class="w-20 h-20 object-cover rounded" />
+                        <div>
+                          <div class="font-semibold">Comfortable Armchair</div>
+                          <div class="text-sm text-gray-500">Glass · 4-seater</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>$299.99</td>
+                    <td>
+                      <div class="flex items-center space-x-2">
+                        <input type="number" class="input input-sm w-16 text-center" value="1" min="1" max="10" aria-label="quantity" />
+                      </div>
+                    </td>
+                    <td>$299.99</td>
+                    <td>
+                      <button class="btn btn-sm btn-circle btn-ghost text-red-500 hover:bg-red-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>4</th>
+                    <td>
+                      <div class="flex items-center space-x-4">
+                        <img src="images/slider/furniture(5).png" alt="Wooden Coffee Table" class="w-20 h-20 object-cover rounded" />
+                        <div>
+                          <div class="font-semibold">Wooden Coffee Table</div>
+                          <div class="text-sm text-gray-500">Oak · Standard</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>$199.99</td>
+                    <td>
+                      <div class="flex items-center space-x-2">
+                        <input type="number" class="input input-sm w-16 text-center" value="1" min="1" max="10" aria-label="quantity" />
+                      </div>
+                    </td>
+                    <td>$199.99</td>
+                    <td>
+                      <button class="btn btn-sm btn-circle btn-ghost text-red-500 hover:bg-red-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>5</th>
+                    <td>
+                      <div class="flex items-center space-x-4">
+                        <img src="images/slider/furniture(6).png" alt="Wooden Cabinet" class="w-20 h-20 object-cover rounded" />
+                        <div>
+                          <div class="font-semibold">Wooden Cabinet</div>
+                          <div class="text-sm text-gray-500">Ergonomic · Black</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>$299.99</td>
+                    <td>
+                      <div class="flex items-center space-x-2">
+                        <input type="number" class="input input-sm w-16 text-center" value="1" min="1" max="10" aria-label="quantity" />
+                      </div>
+                    </td>
+                    <td>$299.99</td>
+                    <td>
+                      <button class="btn btn-sm btn-circle btn-ghost text-red-500 hover:bg-red-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>6</th>
+                    <td>
+                      <div class="flex items-center space-x-4">
+                        <img src="images/slider/furniture(7).png" alt="Younger Furniture" class="w-20 h-20 object-cover rounded" />
+                        <div>
+                          <div class="font-semibold">Younger Furniture</div>
+                          <div class="text-sm text-gray-500">Ergonomic · Black</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>$199.99</td>
+                    <td>
+                      <div class="flex items-center space-x-2">
+                        <input type="number" class="input input-sm w-16 text-center" value="1" min="1" max="10" aria-label="quantity" />
+                      </div>
+                    </td>
+                    <td>$199.99</td>
+                    <td>
+                      <button class="btn btn-sm btn-circle btn-ghost text-red-500 hover:bg-red-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+                    <div class="mt-6 flex justify-end">
+                      <div class="w-full max-w-md">
+                        <div class="p-4 bg-base-100 rounded shadow">
+                          <div class="flex justify-between mb-2">
+                            <span class="text-sm">Subtotal</span>
+                            <span class="text-sm">$1299.98</span>
+                          </div>
+                          <div class="flex justify-between mb-3">
+                            <span class="text-sm">Shipping</span>
+                            <span class="text-sm">$20.00</span>
+                          </div>
+                          <hr class="mb-3" />
+                          <div class="flex justify-between font-bold text-lg">
+                            <span>Total</span>
+                            <span>$1319.98</span>
+                          </div>
+                          <div class="mt-4">
+                            <a href="checkout.html" class="btn btn-block bg-furniture-primary text-white">Proceed to Checkout</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </section>
+   </main>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Dekho | Login</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture dekho | signup</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'btn-signup': 'rgb(255, 56, 17)',
+            'btn-login': 'rgb(0, 123, 255)',
+          }
+        }
+      }
+    }
+  </script>
+    <style>
+    .font-poppins {
+        font-family: "Poppins", sans-serif;
+    }
+</style>
+    <!-- tailwindCSS + daisyUI cdn -->
+
+
+
+</script>
+<!-- google fonts CDN -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body class="font-poppins mx-16">
+    <header>
+        <nav>
+             <nav>
+            <div class="navbar bg-base-100">
+  <div class="flex-1">
+    <div class="dropdown">
+      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+      </div>
+      <ul
+        tabindex="0"
+        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+        <li><a href="index.html">Home</a></li>
+        <li><a>About</a></li>
+        <li><a>Contact</a></li>
+        <li><a>Login</a></li>
+      </ul>
+    </div>
+    <a class="text-xl font-bold">Furniture Dekho</a>
+  </div>
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal px-1">
+        <li ><a href="index.html">Home</a></li>
+        <li><a>About</a></li>
+        <li><a>Contact</a></li>
+        <li><a>Login</a></li>
+      </ul>
+  </div>
+  <div class="">
+    <a href="signup.html" class="btn justify-center align-middle"><img src="images/icons/account.png" alt="" width="30px">Sign up</a>
+  </div>
+</div>
+        </nav>
+        </nav>
+    </header>
+    <main>
+        <div class="hero min-h-screen flex justify-center">
+  <div class="hero-content flex-col lg:flex-row-reverse">
+    <div class="text-center lg:text-left">
+      <h1 class="text-5xl font-bold scroll px-80 mb-11">Login</h1>
+      <img class="mx-56" src="images/login and signup/login.svg" alt="">
+    </div>
+    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+      <form class="card-body">
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Email</span>
+          </label>
+          <input type="email" id="email" placeholder="email" class="input input-bordered" required />
+        </div>
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Password</span>
+          </label>
+          <input type="password" id="password" placeholder="password" class="input input-bordered" required />
+          <label class="label">
+            <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+          </label>
+        </div>
+            <div class="form-control mt-6">
+                <a id="register-button" class="btn bg-btn-signup text-white hover:bg-red-700">Login</a>
+        </div>
+    </a>
+      </form>
+    </div>
+  </div>
+</div>
+    </main>
+    <script>
+        document.getElementById('register-button').addEventListener('click', function(event) {
+            event.preventDefault();
+            // Perform any validation or processing here if needed
+            // Redirect to index.html after registration
+            const email = document.querySelector('input[type="email"]').value;
+            const password = document.querySelector('input[type="password"]').value;
+            console.log('Registered with Email:', email, 'Password:', password);
+
+            const signupSubmit = document.getElementById('email').value;
+            const passwordSubmit = document.getElementById('password').value;
+
+            if (signupSubmit === 'hmahmood071@gmail.com' && passwordSubmit === '123456') {
+                window.location.href = 'signup-index.html';
+            } else {
+                alert('Please fill in all required fields.');
+            }
+        });
+    </script>
+    <footer data-theme="dark" class="footer bg-base-200 text-base-content p-10">
+  <nav>
+    <h6 class="footer-title">Services</h6>
+    <a class="link link-hover">Branding</a>
+    <a class="link link-hover">Design</a>
+    <a class="link link-hover">Marketing</a>
+    <a class="link link-hover">Advertisement</a>
+  </nav>
+  <nav>
+    <h6 class="footer-title">Company</h6>
+    <a class="link link-hover">About us</a>
+    <a class="link link-hover">Contact</a>
+    <a class="link link-hover">Jobs</a>
+    <a class="link link-hover">Press kit</a>
+  </nav>
+  <nav>
+    <h6 class="footer-title">Legal</h6>
+    <a class="link link-hover">Terms of use</a>
+    <a class="link link-hover">Privacy policy</a>
+    <a class="link link-hover">Cookie policy</a>
+  </nav>
+  <form>
+    <h6 class="footer-title">Newsletter</h6>
+    <fieldset class="form-control w-80">
+      <label class="label">
+        <span class="label-text">Enter your email address</span>
+      </label>
+      <div class="join">
+        <input
+          type="text"
+          placeholder="username@site.com"
+          class="input input-bordered join-item" />
+        <button class="btn btn-primary join-item">Subscribe</button>
+      </div>
+    </fieldset>
+  </form>
+</footer>
+</body>
+</html>
