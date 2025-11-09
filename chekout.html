@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'furniture-primary': '#E76F51',
+            'furniture-slider-bg': 'rgb(255, 87, 34)',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-poppins mx-16">
+    <header>
+         <nav>
+            <div class="navbar bg-base-100">
+  <div class="flex-1">
+    <div class="dropdown">
+      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h8m-8 6h16" />
+        </svg>
+      </div>
+      <ul
+        tabindex="0"
+        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+        <li><a href="index.html">Home</a></li>
+        <li><a>About</a></li>
+        <li><a>Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+    <a class="text-xl font-bold">Furniture Dekho</a>
+  </div>
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal px-1">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a>Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+  </div>
+  <div class="">
+    <a href="signup.html" class="btn bg-furniture-primary text-white hover:bg-furniture-slider-bg justify-center align-middle"><img src="images/icons/account.png" alt="" width="30px">Sign up</a>
+  </div>
+</div>
+        </nav>
+    </header>
+    <main>
+        <section class="my-10 sm:my-16 lg:my-20 px-4 sm:px-6 lg:px-16 max-w-7xl mx-auto flex flex-col items-center gap-8"></section>
+            <div class="text-center">
+                <h1 class="text-4xl font-bold">Chekout</h1>
+                <p class="text-gray-600 mt-4">Complete your purchase by providing your payment details below.</p>
+            </div>
+            <div class="max-w-2xl mx-auto mt-10 p-6 border border-gray-300 rounded-lg shadow-lg">
+                <form action="#" method="POST" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                        <input type="text" id="name" name="name" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-furniture-primary focus:border-furniture-primary">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                        <input type="email" id="email" name="email" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-furniture-primary focus:border-furniture-primary">
+                    </div>
+                     <div class="mt-1">
+                                <div>
+                                  <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                                  <div class="relative">
+                                    <input
+                                      type="password"
+                                      id="password"
+                                      name="password"
+                                      autocomplete="current-password"
+                                      required
+                                      class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 pr-10 focus:ring-furniture-primary focus:border-furniture-primary"
+                                      placeholder="Enter your password">
+                                    <button type="button" id="toggle-password" class="absolute right-2 top-2 text-sm text-gray-500">
+                                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="show-icon">
+                                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                      </svg>
+                                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="hide-icon">
+                                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
+                                      </svg>
+                                    </button></svg></button>
+                                  </div>
+                                </div>
+                              </div>
+                    <div>
+                        <label for="card-number" class="block text-sm font-medium text-gray-700">Card Number</label>
+                        <input type="text" id="card-number" name="card-number" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-furniture-primary focus:border-furniture-primary">
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label for="expiry-date" class="block text-sm font-medium text-gray-700">Expiry Date</label>
+                            <input type="text" id="expiry-date" name="expiry-date" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-furniture-primary focus:border-furniture-primary">
+                        </div>
+                        <div>
+                            <label for="cvv" class="block text-sm font-medium text-gray-700">CVV</label>
+                            <input type="text" id="cvv" name="cvv" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-furniture-primary focus:border-furniture-primary">
+                            <br>
+                            <br>
+                            <form class="form-control">
+                              <label class="label cursor-pointer">
+                                <span class="label-text">Show Password</span>
+                                <input type="checkbox" id="toggle-password" class="checkbox">
+                              </label>
+                            </form>
+
+                                <script>
+                                (function () {
+                                  const toggle = document.getElementById('toggle-password');
+                                  const pwd = document.getElementById('password');
+                                  const showIcon = document.getElementById('show-icon');
+                                  const hideIcon = document.getElementById('hide-icon');
+                                  if (!toggle || !pwd) return;
+                                  toggle.addEventListener('click', function () {
+                                    if (pwd.type === 'password') {
+                                      pwd.type = 'text';
+                                      showIcon.classList.add('hidden');
+                                      hideIcon.classList.remove('hidden');
+                                    } else {
+                                      pwd.type = 'password';
+                                      showIcon.classList.remove('hidden');
+                                      hideIcon.classList.add('hidden');
+                                    }
+                                  });
+                                })();
+                              </script>
+                              <br>
+                              <a href="sucsess.html" id="register-button" class="btn btn-wide bg-furniture-primary text-white hover:bg-furniture-slider-bg">Pay Now</a>
+                            </form>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
