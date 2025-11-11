@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+  .font-poppins {
+        font-family: "Poppins", sans-serif;
+    }
+</style>
+</head>
+<body class="font-poppins mx-16">
+    <header>
+        <nav>
+            <div class="navbar bg-base-100">
+  <div class="flex-1">
+    <a class="text-xl font-bold">Furniture Dekho</a>
+  </div>
+  <div class="flex-none gap-2">
+    <div class="form-control">
+      <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+    </div>
+    <div class="dropdown dropdown-end">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+        <div class="w-10 rounded-full">
+          <img
+            alt="Tailwind CSS Navbar component"
+            src="images/avatar/avatar.jpg" />
+        </div>
+      </div>
+      <ul
+        tabindex="0"
+        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+        <li>
+          <a class="justify-between">
+            Profile
+            <span class="badge">New</span>
+          </a>
+        </li>
+        <li><a href="settings.html">Settings</a></li>
+        <li><a href="index.html">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    </header>
+   <main>
+    <div class="flex gap-6 mt-8">
+        <div class="flex-1">
+            <h2 class="text-2xl font-semibold mb-4">Account Settings</h2>
+            <p class="text-gray-600 mb-6">Manage your account preferences and settings below.</p>
+    </div>
+        <!-- Sidebar -->
+        <aside class="w-64 bg-base-200 p-4 rounded-lg shrink-0">
+            <div class="mb-4">
+                <button class="btn btn-primary btn-block">Create New</button>
+            </div>
+
+            <!-- Dropdown on the left -->
+            <div class="mb-4">
+                <div class="dropdown">
+                    <label tabindex="0" class="btn btn-ghost justify-between w-full">
+                        Filters
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24"
+                                 stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </label>
+                    <ul tabindex="0" class="menu menu-compact dropdown-content mt-2 p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a>All</a></li>
+                        <li><a>Favorites</a></li>
+                        <li><a>Archived</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Vertical menu with a nested collapsible section -->
+            <ul class="menu bg-base-200 rounded-box p-2 text-sm">
+                <li class="mb-1"><a href="profile.html" class="justify-between">Profile</a></li>
+                <li class="mb-1"><a>Account</a></li>
+                <li class="mb-1"><a>Billing</a></li>
+                <li>
+                    <details class="group">
+                        <summary class="cursor-pointer py-2 px-3 rounded hover:bg-base-300 flex justify-between items-center">
+                            Advanced
+                            
+                        </summary>
+                        <ul class="mt-2 ml-2">
+                            <li class="mb-1"><a>Integrations</a></li>
+                            <li><a>Developer</a></li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main settings panel -->
+
+            <form id="settingsForm" class="space-y-6 max-w-2xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="label">
+                            <span class="label-text">Display Name</span>
+                        </label>
+                        <input id="displayName" type="text" placeholder="John Doe" class="input input-bordered w-full" />
+                    </div>
+
+                    <div>
+                        <label class="label">
+                            <span class="label-text">Email</span>
+                        </label>
+                        <input id="email" type="email" placeholder="you@example.com" class="input input-bordered w-full" />
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="label">
+                            <span class="label-text">Default Theme</span>
+                        </label>
+                        <select id="themeSelect" class="select select-bordered w-full">
+                            <option value="light">Light</option>
+                            <option value="dark">Dark</option>
+                            <option value="system">System</option>
+                        </select>
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <label class="label">
+                                <span class="label-text">Email Notifications</span>
+                            </label>
+                            <span class="text-sm text-gray-500">Receive updates and offers</span>
+                        </div>
+                        <div class="form-control">
+                            <label class="cursor-pointer label">
+                                <input id="emailNotifications" type="checkbox" class="toggle toggle-primary" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="label">
+                        <span class="label-text">Signature</span>
+                    </label>
+                    <textarea id="signature" class="textarea textarea-bordered w-full" placeholder="Add a personal signature"></textarea>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <button id="saveBtn" type="submit" class="btn btn-primary">Save Changes</button>
+                    <button id="cancelBtn" type="button" class="btn btn-ghost">Cancel</button>
+                </div>
+            </form>
+
+            <!-- Simple inline feedback -->
+            <div id="msg" class="alert alert-success shadow-lg mt-4 hidden">
+                <div>
+                    <span id="msgText">Settings saved.</span>
+                </div>
+            </div>
+
+            <script>
+                (function () {
+                    const STORAGE_KEY = 'app_settings_v1';
+
+                    const form = document.getElementById('settingsForm');
+                    const displayName = document.getElementById('displayName');
+                    const email = document.getElementById('email');
+                    const themeSelect = document.getElementById('themeSelect');
+                    const emailNotifications = document.getElementById('emailNotifications');
+                    const signature = document.getElementById('signature');
+                    const msg = document.getElementById('msg');
+                    const msgText = document.getElementById('msgText');
+                    const cancelBtn = document.getElementById('cancelBtn');
+
+                    function applyTheme(theme) {
+                        if (!theme || theme === 'System') {
+                            document.documentElement.removeAttribute('data-theme');
+                        } else {
+                            document.documentElement.setAttribute('data-theme', theme.toLowerCase());
+                        }
+                    }
+
+                    function loadSettings() {
+                        try {
+                            const raw = localStorage.getItem(STORAGE_KEY);
+                            if (!raw) return;
+                            const s = JSON.parse(raw);
+                            displayName.value = s.displayName || '';
+                            email.value = s.email || '';
+                            themeSelect.value = s.theme || 'System';
+                            emailNotifications.checked = !!s.emailNotifications;
+                            signature.value = s.signature || '';
+                            applyTheme(s.theme);
+                        } catch (e) {
+                            console.error('Failed to load settings', e);
+                        }
+                    }
+
+                    function saveSettings() {
+                        const s = {
+                            displayName: displayName.value,
+                            email: email.value,
+                            theme: themeSelect.value,
+                            emailNotifications: emailNotifications.checked,
+                            signature: signature.value
+                        };
+                        try {
+                            localStorage.setItem(STORAGE_KEY, JSON.stringify(s));
+                            applyTheme(s.theme);
+                            showMessage('Settings saved.');
+                        } catch (e) {
+                            console.error('Failed to save settings', e);
+                            showMessage('Failed to save settings.');
+                        }
+                    }
+
+                    function showMessage(text) {
+                        msgText.textContent = text;
+                        msg.classList.remove('hidden');
+                        clearTimeout(showMessage._t);
+                        showMessage._t = setTimeout(() => msg.classList.add('hidden'), 2500);
+                    }
+
+                    form.addEventListener('submit', function (e) {
+                        e.preventDefault();
+                        saveSettings();
+                    });
+
+                    cancelBtn.addEventListener('click', function () {
+                        loadSettings();
+                        showMessage('Changes reverted.');
+                    });
+
+                    // Immediate apply when selecting theme
+                    themeSelect.addEventListener('change', function () {
+                        applyTheme(themeSelect.value);
+                    });
+
+                    // load on start
+                    document.addEventListener('DOMContentLoaded', loadSettings);
+                })();
+            </script>
+        </section>
+    </div>
+   </main>
+</body>
+</html>

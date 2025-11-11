@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+  .font-poppins {
+        font-family: "Poppins", sans-serif;
+    }
+</style>
+</head>
+<body class="font-poppins mx-16">
+    <header>
+        <nav>
+            <div class="navbar bg-base-100">
+  <div class="flex-1">
+    <a class="text-xl font-bold">Furniture Dekho</a>
+  </div>
+  <div class="flex-none gap-2">
+    <div class="form-control">
+      <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+    </div>
+    <div class="dropdown dropdown-end">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+        <div class="w-10 rounded-full">
+          <img
+            alt="Tailwind CSS Navbar component"
+            src="images/avatar/avatar.jpg" />
+        </div>
+      </div>
+      <ul
+        tabindex="0"
+        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+        <li>
+          <a class="justify-between">
+            Profile
+            <span class="badge">New</span>
+          </a>
+        </li>
+        <li><a href="settings.html">Settings</a></li>
+        <li><a href="index.html">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-8">
+            <!-- Stats Cards -->
+            <div class="stat bg-primary text-primary-content p-4 rounded-lg">
+                <div class="stat-title">Total Sales</div>
+                <div class="stat-value" id="totalSales">0</div>
+                <div class="stat-desc">21% more than last month</div>
+            </div>
+            <div class="stat bg-secondary text-secondary-content p-4 rounded-lg">
+                <div class="stat-title">New Customers</div>
+                <div class="stat-value" id="newCustomers">0</div>
+                <div class="stat-desc">↗︎ 400 (22%)</div>
+            </div>
+            <div class="stat bg-accent text-accent-content p-4 rounded-lg">
+                <div class="stat-title">Active Orders</div>
+                <div class="stat-value" id="activeOrders">0</div>
+                <div class="stat-desc">↘︎ 90 (14%)</div>
+            </div>
+            <div class="stat bg-neutral text-neutral-content p-4 rounded-lg">
+                <div class="stat-title">Revenue</div>
+                <div class="stat-value" id="revenue">$0</div>
+                <div class="stat-desc">↗︎ 30%</div>
+            </div>
+
+            <!-- Recent Orders Table -->
+            <div class="col-span-full overflow-x-auto">
+                <table class="table w-full">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Product</th>
+                            <th>Status</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody id="orderTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <script>
+            // Simulated data update
+            function updateDashboard() {
+                document.getElementById('totalSales').textContent = Math.floor(Math.random() * 1000);
+                document.getElementById('newCustomers').textContent = Math.floor(Math.random() * 500);
+                document.getElementById('activeOrders').textContent = Math.floor(Math.random() * 100);
+                document.getElementById('revenue').textContent = '$' + Math.floor(Math.random() * 50000);
+
+                const orders = [
+                    { id: '001', customer: 'John Doe', product: 'Sofa', status: 'Delivered', amount: '$599' },
+                    { id: '002', customer: 'Jane Smith', product: 'Table', status: 'Processing', amount: '$299' },
+                    { id: '003', customer: 'Bob Wilson', product: 'Chair', status: 'Pending', amount: '$199' }
+                ];
+
+                const tableBody = document.getElementById('orderTableBody');
+                tableBody.innerHTML = orders.map(order => `
+                    <tr>
+                        <td>${order.id}</td>
+                        <td>${order.customer}</td>
+                        <td>${order.product}</td>
+                        <td>${order.status}</td>
+                        <td>${order.amount}</td>
+                    </tr>
+                `).join('');
+            }
+
+            // Update dashboard every 5 seconds
+            updateDashboard();
+            setInterval(updateDashboard, 5000);
+        </script>
+    </main>
+</body>
+</html>

@@ -210,7 +210,8 @@
                     <td>$299.99</td>
                     <td>
                       <div class="flex items-center space-x-2">
-                        <input type="number" class="input input-sm w-16 text-center" value="1" min="1" max="10" aria-label="quantity" />
+                        <input type="number" class="input input-sm w-16 text-center" value="1" min="1" max="10" aria-label="quantity" 
+                        oninput="(function(el){var tr=el.closest('tr');var priceText=(tr.cells[2] && tr.cells[2].textContent||'').replace(/[^0-9.]/g,'');var price=parseFloat(priceText)||0;var qty=Number(el.value)||0;var total=(price*qty).toFixed(2); if(tr.cells[4]) tr.cells[4].textContent='$'+total;})(this)" />
                       </div>
                     </td>
                     <td>$299.99</td>
@@ -236,7 +237,8 @@
                     <td>$199.99</td>
                     <td>
                       <div class="flex items-center space-x-2">
-                        <input type="number" class="input input-sm w-16 text-center" value="1" min="1" max="10" aria-label="quantity" />
+                        <input type="number" class="input input-sm w-16 text-center" value="1" min="1" max="10" aria-label="quantity" 
+                        oninput="(function(el){var tr=el.closest('tr');var priceText=(tr.cells[2] && tr.cells[2].textContent||'').replace(/[^0-9.]/g,'');var price=parseFloat(priceText)||0;var qty=Number(el.value)||0;var total=(price*qty).toFixed(2); if(tr.cells[4]) tr.cells[4].textContent='$'+total;})(this)" />
                       </div>
                     </td>
                     <td>$199.99</td>
@@ -262,22 +264,22 @@
                     <td>$199.99</td>
                     <td>
                       <div class="flex items-center space-x-2">
-                        <input type="number" class="input input-sm w-16 text-center" value="1" min="1" max="10" aria-label="quantity" />
+                        <input type="number" class="input input-sm w-16 text-center" value="1" min="1" max="10" aria-label="quantity"
+                        oninput="(function(el){var tr=el.closest('tr');var priceText=(tr.cells[2] && tr.cells[2].textContent||'').replace(/[^0-9.]/g,'');var price=parseFloat(priceText)||0;var qty=Number(el.value)||0;var total=(price*qty).toFixed(2); if(tr.cells[4]) tr.cells[4].textContent='$'+total;})(this)" />
                       </div>
                     </td>
                     <td>$199.99</td>
                     <td>
-                      <button class="btn btn-sm btn-circle btn-ghost text-red-500 hover:bg-red-100">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <button class="btn btn-sm btn-circle btn-ghost text-red-500 hover:bg-red-100">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                         </svg>
-                      </button>
+                        </button>
                     </td>
                   </tr>
                 </tbody>
               </table>
             </div>
-
                     <div class="mt-6 flex justify-end">
                       <div class="w-full max-w-md">
                         <div class="p-4 bg-base-100 rounded shadow">
