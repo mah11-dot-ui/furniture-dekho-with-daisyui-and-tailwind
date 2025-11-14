@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+  .font-poppins {
+        font-family: "Poppins", sans-serif;
+    }
+</style>
+</head>
+<body class="font-poppins mx-16">
+    <nav>
+          <header>
+            <nav>
+            <div class="navbar bg-base-100">
+  <div class="flex-1">
+    <a class="text-xl font-bold">Furniture Dekho</a>
+  </div>
+  <div class="flex-none gap-2">
+    <div class="form-control">
+      <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+    </div>
+    <div class="dropdown dropdown-end">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+        <div class="w-10 rounded-full">
+          <img id="img-p"
+            alt="Tailwind CSS Navbar component"
+            src="images/avatar/avatar.jpg" />
+        </div>
+      </div>
+      <ul
+        tabindex="0"
+        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+        <li>
+          <a class="justify-between">
+            Profile
+            <span class="badge">New</span>
+          </a>
+        </li>
+        <li><a>Settings</a></li>
+        <li><a href="index.html">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+        </nav>
+          </header>
+    </nav>
+    <main>
+        <h1 class="text-3xl font-bold mt-8 mb-4">Edit Profile</h1>
+        <div class="card w-full bg-base-100 shadow-md">
+    <div class="card-body">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Edit Form -->
+            <div class="md:col-span-2">
+                <form>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-bold mb-2" for="name">Name</label>
+                        <input
+                            class="input input-bordered w-full"
+                            type="text"
+                            id="name"
+                            value="Mahmood Hassan" required/>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-bold mb-2" for="email">Email</label>
+                        <input
+                            class="input input-bordered w-full"
+                            type="email"
+                            id="email"
+                            value="hmahmood071@gmail.com" required/>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-bold mb-2" for="member-since">Member Since</label>
+                        <input
+                            class="input input-bordered w-full"
+                            type="text"
+                            id="member-since"
+                            value="2025"
+                            disabled />
+                    </div>
+                    <div id="auth-section">
+                        <label class="block text-gray-700 font-bold mb-2" for="profile-picture">Profile Picture</label>
+                        <input
+                            class="input input-bordered w-full"
+                            type="file"
+                            id="profile-picture" />
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <button class="btn btn-primary" id="sav-btn" type="submit"
+                        >Save Changes</button>
+                        <a href="profile.html" class="btn btn-outline">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+<script>
+  document.addEventListener('DOMContentLoaded', function(event) {
+    event.preventDefault();
+    const authSection = document.getElementById('auth-section');
+    const isAuthenticated = true; // Change this based on actual authentication status
+
+    if (!isAuthenticated) {
+        authSection.style.display = 'none';
+    }
+    const profilePictureInput = document.getElementById('profile-picture');
+    profilePictureInput.addEventListener('change', function(event) {
+    const Image = event.target.files[0];
+    if (!Image) return;
+    // Display selected image name in console (or handle as needed)
+    document.getElementById('profile-picture').value;
+    console.log('Selected image file:', Image);
+    });
+    const Image = profilePictureInput.files[0];
+    if (!Image) return;
+    // Access image name
+
+
+    Image.name;
+    console.log('image name:', Image.name);
+});
+document.getElementById('img-p').document.querySelector('#profile-picture').addEventListener('change', function(event) {
+    const Image = event.target.files[0];
+    if (!Image) return;
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        document.getElementById('img-p').src = e.target.result;
+    };
+    document.getElementById('sav-btn').addEventListener('click', function(event) {
+        event.preventDefault(Image.FileReader);
+        reader.readAsDataURL(Image);
+    });
+    reader.readAsDataURL(Image);
+});
+</script>
+</body>
+</html>
